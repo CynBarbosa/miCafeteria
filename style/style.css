@@ -134,6 +134,7 @@ main {
 }
 .contenedorNosotrosSecundario {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 70%;
 }
@@ -285,6 +286,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /*<-----main----->*/
+  main {
+    padding-bottom: 80px;
+  }
   /*<-----nosotros----->*/
   .contenedorNosotros img {
     width: 400px;
@@ -292,6 +297,14 @@ footer {
   }
   .contenedorNosotrosSecundario {
     flex-direction: column;
+    align-items: center;
+  }
+  .contenedorNosotrosSecundario div {
+    width: 70%;
+  }
+  /*<-----usuario----->*/
+  .contenedorUser {
+    width: 80%;
   }
   /*<-----footer----->*/
   footer {
