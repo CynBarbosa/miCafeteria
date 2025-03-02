@@ -107,21 +107,26 @@
               alt="Té de Burbujas"
             />
             <div class="contenedorCarritoTexto">
-              <h3>titulo del producto</h3>
+              <h3>Té de Burbujas</h3>
               <span>precio: $3.000</span>
               <div class="contenedorCarritoCantidad">
                 <span>cantidad: </span>
-                <div class="contador">
-                  <button class="boton" disabled>-</button>
-                  <input class="numero" type="text" value="0" readonly />
-                  <button class="boton" disabled>+</button>
+                <div class="contadorContenedor">
+                  <button class="botonContador" disabled>-</button>
+                  <input
+                    class="numeroContador"
+                    type="text"
+                    value="1"
+                    readonly
+                  />
+                  <button class="botonContador" disabled>+</button>
                 </div>
               </div>
             </div>
             <div class="contenedorCarritoEliminar">
               <a href=""
                 ><img
-                  class="iconoEliminar"
+                  class="iconoEliminar iconFondo"
                   src="../asset/icono/bxs-trash.svg"
                   alt="Eliminar"
               /></a>
@@ -134,21 +139,26 @@
               alt="Porción de torta"
             />
             <div class="contenedorCarritoTexto">
-              <h3>titulo del producto</h3>
+              <h3>Torta Bombon</h3>
               <span>precio: $1.500</span>
               <div class="contenedorCarritoCantidad">
                 <span>cantidad: </span>
-                <div class="contador">
-                  <button class="boton" disabled>-</button>
-                  <input class="numero" type="text" value="0" readonly />
-                  <button class="boton" disabled>+</button>
+                <div class="contadorContenedor">
+                  <button class="botonContador" disabled>-</button>
+                  <input
+                    class="numeroContador"
+                    type="text"
+                    value="1"
+                    readonly
+                  />
+                  <button class="botonContador" disabled>+</button>
                 </div>
               </div>
             </div>
             <div class="contenedorCarritoEliminar">
               <a href=""
                 ><img
-                  class="iconoEliminar"
+                  class="iconoEliminar iconFondo"
                   src="../asset/icono/bxs-trash.svg"
                   alt="Eliminar"
               /></a>
@@ -156,8 +166,14 @@
           </div>
         </div>
         <div class="contenedorCarritoPedido">
-          <span>total: $20000</span>
-          <button>finalizar pedido</button>
+          <h3 class="shadowText">Detalle de su pedido</h3>
+          <span class="carritoPedidoTexto">1 articulo: $3.000</span>
+          <span class="carritoPedidoTexto"
+            >1 articulo: $1.500
+            <hr
+          /></span>
+          <span class="carritoPedidoTexto">total: $4.500 </span>
+          <button class="carritoPedidoBoton">Finalizar pedido</button>
         </div>
       </div>
     </main>

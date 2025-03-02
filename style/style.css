@@ -131,6 +131,7 @@ main {
 .contenedorNosotros p {
   padding: 10px 15px;
   font-weight: 400;
+  text-align: center;
 }
 .contenedorNosotrosSecundario {
   display: flex;
@@ -139,7 +140,7 @@ main {
   width: 70%;
 }
 .contenedorNosotrosSecundario div {
-  width: 30%;
+  width: 40%;
   border: 1px solid #30261c81;
   border-radius: 10px;
   padding-top: 8px;
@@ -153,7 +154,7 @@ main {
   justify-content: center;
 }
 .contenedorUser {
-  width: 45%;
+  width: 50%;
   margin-top: 20px;
   border: 1px solid black;
   border-radius: 10px;
@@ -193,29 +194,27 @@ main {
 .contenedorCarrito {
   display: flex;
   justify-content: center;
-}
-.contenedorCarritoTarj {
-  width: 70%;
+  padding: 10px;
+  width: 100%;
+  gap: 5px;
 }
 .carritoTarj {
   display: flex;
   align-items: center;
-  margin: 10px;
   border: 1px solid black;
   border-radius: 5px;
   font-family: "Roboto", serif;
   font-weight: 600;
+  color: #30261c;
+  margin-bottom: 5px;
 }
 .carritoImg {
   width: 10%;
-  height: 10%;
-  margin: 5px;
   border-radius: 5px;
 }
 .contenedorCarritoTexto {
   width: 80%;
-  border: solid red;
-  padding: 5px;
+  padding: 5px 10px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -224,16 +223,55 @@ main {
   display: flex;
   gap: 10px;
 }
+.contadorContenedor {
+  display: flex;
+  gap: 5px;
+}
+.numeroContador {
+  width: 10%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.botonContador {
+  width: 10%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #a4927a;
+  color: #30261c;
+}
 .contenedorCarritoEliminar {
   width: 10%;
   display: flex;
   justify-content: center;
 }
 .contenedorCarritoPedido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   border: 1px solid black;
   border-radius: 5px;
-  margin: 10px;
   width: 20%;
+}
+.carritoPedidoTexto {
+  color: #30261c;
+  font-size: 20px;
+  font-family: "Roboto", serif;
+  font-weight: 600;
+}
+.carritoPedidoBoton {
+  background-color: #a4927a;
+  color: #30261c;
+  padding: 2px 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 /*<----------Footer---------->*/
@@ -291,23 +329,92 @@ footer {
     padding-bottom: 80px;
   }
   /*<-----nosotros----->*/
+  .contenedorNosotros h2 {
+    font-size: 30px;
+  }
   .contenedorNosotros img {
-    width: 400px;
-    height: 400px;
+    width: 70%;
+    height: 70%;
+  }
+  .contenedorNosotros p {
+    font-size: 12px;
   }
   .contenedorNosotrosSecundario {
     flex-direction: column;
     align-items: center;
   }
   .contenedorNosotrosSecundario div {
-    width: 70%;
+    width: 100%;
   }
   /*<-----usuario----->*/
   .contenedorUser {
     width: 80%;
   }
+  /*<-----carrito----->*/
+  .contenedorCarrito {
+    flex-direction: column;
+  }
+  .carritoTarj {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: "Roboto", serif;
+    font-weight: 600;
+    color: #30261c;
+  }
+  .carritoImg {
+    width: 10%;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .contenedorCarritoTexto {
+    width: 80%;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 10px;
+  }
+  .contenedorCarritoTexto h3 {
+    font-size: 15px;
+  }
+  .iconoEliminar {
+    width: 50%;
+  }
+  .contenedorCarritoPedido {
+    width: 100%;
+    gap: 5px;
+    padding: 5px 0;
+  }
+  .carritoPedidoTexto {
+    font-size: 15px;
+  }
+  .carritoPedidoBoton {
+    font-size: 10px;
+  }
   /*<-----footer----->*/
   footer {
     height: 80px;
+    justify-content: center;
+  }
+  .logoFooter {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0 2px 10px;
+  }
+  .parrafoFooter {
+    font-size: 10px;
+    margin: 20px 0 2px;
+  }
+  .redesSociales {
+    gap: 2px;
+  }
+  .redesSociales h5 {
+    font-size: 10px;
+  }
+  .redesSociales a img {
+    width: 100%;
   }
 }
