@@ -171,6 +171,13 @@ main {
   border-radius: 5px;
   font-family: "Roboto", serif;
   font-weight: 600;
+  box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
+}
+.contenedorCatalogoCard button:hover {
+  background-color: #30261c;
+  color: #a4927a;
 }
 /*<-----------nosotros---------->*/
 .contenedorNosotros {
@@ -186,7 +193,7 @@ main {
 }
 .contenedorNosotros img {
   border-radius: 10px;
-  width: 100%;
+  width: 80%;
 }
 .contenedorNosotros p span {
   padding: 5px;
@@ -241,12 +248,19 @@ main {
   border-radius: 5px;
   padding: 2px 5px;
 }
-.contenedorUser button {
+.bottonUsuario {
   background-color: #a4927a;
   color: #30261c;
+  border: none;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
   padding: 2px 15px;
+}
+.bottonUsuario:hover {
+  background-color: #30261c;
+  color: #a4927a;
 }
 .contenedorUser a {
   color: #a4927a;
@@ -341,6 +355,10 @@ main {
   font-family: "Roboto", serif;
   font-weight: 500;
   font-size: 15px;
+  box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
+  margin-bottom: 5px;
 }
 
 /*<----------Footer---------->*/
