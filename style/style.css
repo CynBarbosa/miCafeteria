@@ -132,8 +132,22 @@ main {
   background-color: rgba(0, 0, 0, 0.582);
   margin-left: 10px;
 }
+.contenedorCatalogoProductos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+.contenedorCatalogoCard {
+  border: 1px solid rgba(0, 0, 0, 0.582);
+  border-radius: 10px;
+  padding: 5px;
+  height: auto;
+  text-align: center;
+  font-family: "Roboto", serif;
+  font-weight: 600;
+}
 .contenedorCatalogoCard img {
-  width: 20%;
+  width: 50%;
 }
 .contenedorCatalogoCard button {
   background-color: #a4927a;
@@ -158,6 +172,7 @@ main {
 }
 .contenedorNosotros img {
   border-radius: 10px;
+  width: 100%;
 }
 .contenedorNosotros p span {
   padding: 5px;
@@ -174,15 +189,15 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
 }
 .contenedorNosotrosSecundario div {
-  width: 40%;
+  width: 50%;
   border: 1px solid #30261c81;
   border-radius: 10px;
   padding-top: 8px;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.445);
-  margin-bottom: 10px;
+  margin: 0px 5px 10px 5px;
 }
 
 /*<----------usuario---------->*/
@@ -230,10 +245,12 @@ main {
 }
 .contenedorCarrito {
   display: flex;
-  justify-content: center;
   padding: 10px;
   width: 100%;
   gap: 5px;
+}
+.contenedorCarritoTarj {
+  width: 70%;
 }
 .carritoTarj {
   display: flex;
@@ -292,13 +309,14 @@ main {
   gap: 10px;
   border: 1px solid black;
   border-radius: 5px;
-  width: 20%;
+  width: 30%;
 }
 .carritoPedidoTexto {
   color: #30261c;
   font-size: 20px;
   font-family: "Roboto", serif;
   font-weight: 600;
+  text-align: center;
 }
 .carritoPedidoBoton {
   background-color: #a4927a;
@@ -359,11 +377,20 @@ footer {
   text-decoration: none;
   display: inline-block;
 }
+/* @media (max-width: 768px) */
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   /*<-----main----->*/
   main {
     padding-bottom: 80px;
+  }
+  /*<------catalogo----->*/
+  .contenedorCatalogoProductos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
   }
   /*<-----nosotros----->*/
   .contenedorNosotros h2 {
@@ -390,6 +417,10 @@ footer {
   /*<-----carrito----->*/
   .contenedorCarrito {
     flex-direction: column;
+    align-items: center;
+  }
+  .contenedorCarritoTarj {
+    width: 100%;
   }
   .carritoTarj {
     display: flex;
@@ -402,7 +433,7 @@ footer {
     color: #30261c;
   }
   .carritoImg {
-    width: 10%;
+    width: 20%;
     margin: 5px;
     border-radius: 5px;
   }
@@ -421,7 +452,7 @@ footer {
     width: 50%;
   }
   .contenedorCarritoPedido {
-    width: 100%;
+    width: 80%;
     gap: 5px;
     padding: 5px 0;
   }
