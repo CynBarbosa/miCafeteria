@@ -106,7 +106,44 @@ header {
 main {
   padding-bottom: 60px;
 }
-
+/*<----------catalogo---------->*/
+.mainCatalogo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contenedorCatalogo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.subTituloCatalogo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: "Roboto", serif;
+  font-weight: 600;
+  font-size: 25px;
+}
+.subTituloCatalogo::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.582);
+  margin-left: 10px;
+}
+.contenedorCatalogoCard img {
+  width: 20%;
+}
+.contenedorCatalogoCard button {
+  background-color: #a4927a;
+  color: #30261c;
+  padding: 2px 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", serif;
+  font-weight: 600;
+}
 /*<-----------nosotros---------->*/
 .contenedorNosotros {
   display: flex;
