@@ -44,7 +44,6 @@
 
 .contenedorCatalogoCard {
   @extend %border;
-  @extend %borderRadius1;
   height: auto;
   @extend %textAlign;
   @include mixin.tipografia("Roboto", 600, 13px);
@@ -54,14 +53,52 @@
   button {
     background-color: nth(color.$color, 2);
     color: nth(color.$color, 3);
-    padding: 2px 10px;
+    @include mixin.marginPadding(0 0 10px 0, 2px 10px);
     border: none;
     @extend %borderRadius2;
     @include mixin.tipografia("Roboto", 600, 15px);
     @extend %boxShadow;
+    transform: translate(0, -3px);
+    cursor: pointer;
+    transition: 0.2s;
+    transition-timing-function: linear;
   }
-  button:hover {
-    background-color: nth(color.$color, 3);
-    color: nth(color.$color, 2);
+  button:active {
+    transform: translate(0, 0);
   }
+}
+
+.contenedorCatalogoCard:hover {
+  background-color: nth(color.$color, 3);
+  color: nth(color.$color, 1);
+  border: 5px solid transparent;
+  position: relative;
+  animation: borderAnimation 4s linear infinite;
+  button {
+    box-shadow: 5px 5px 5px 0px nth(color.$color, 1);
+    -webkit-box-shadow: 5px 5px 5px 0px nth(color.$color, 1);
+    -moz-box-shadow: 5px 5px 5px 0px nth(color.$color, 1);
+  }
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-image-source: linear-gradient(45deg, #488cfb, #29dbbc);
+  }
+  25% {
+    border-image-source: linear-gradient(45deg, #29dbbc, #ddf505);
+  }
+  50% {
+    border-image-source: linear-gradient(45deg, #ddf505, #ff9f0e);
+  }
+  75% {
+    border-image-source: linear-gradient(45deg, #ff9f0e, #e440bb);
+  }
+  100% {
+    border-image-source: linear-gradient(45deg, #e440bb, #655adc);
+  }
+}
+
+.contenedorCatalogoCard:hover {
+  border-image-slice: 1;
 }
