@@ -1,5 +1,6 @@
 @use "../utilidades/extends";
 @use "../utilidades/mixins" as mixin;
+@use "../utilidades/colores" as color;
 
 .mainHome {
   width: 100%;
@@ -13,4 +14,14 @@
 }
 .contenedorHome {
   padding: 10px;
+}
+.textBienvenida {
+  @include mixin.tipografia("Roboto", 600, 30px);
+  background-color: nth(color.$color, 1);
+  color: nth(color.$color, 3);
+  padding: 5px;
+  border: 2px solid transparent;
+  position: relative;
+  animation: borderAnimation 4s linear infinite;
+  border-image-slice: 1;
 }

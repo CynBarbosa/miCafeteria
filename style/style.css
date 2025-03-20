@@ -189,6 +189,24 @@ header {
   padding: 10px;
 }
 
+.textBienvenida {
+  font-family: "Roboto", serif;
+  font-weight: 600;
+  font-size: 30px;
+  background-color: #e2ded7;
+  color: #30261c;
+  padding: 5px;
+  border: 2px solid transparent;
+  position: relative;
+  animation: borderAnimation 4s linear infinite;
+  border-image-slice: 1;
+}
+
+@media (max-width: 500px) {
+  .textBienvenida {
+    font-size: 15px;
+  }
+}
 .mainCatalogo {
   gap: 5px;
 }
