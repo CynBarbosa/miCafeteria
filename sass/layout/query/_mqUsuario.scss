@@ -1,0 +1,8 @@
+@use "../../utilidades/mixins" as mixin;
+
+@media (max-width: 500px) {
+  .contenedorUser {
+    width: 80%;
+    @include mixin.tipografia("Roboto", 600, 15px);
+  }
+}

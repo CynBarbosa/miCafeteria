@@ -1,0 +1,67 @@
+@use "../utilidades/extends";
+@use "../utilidades/mixins" as mixin;
+@use "../utilidades/colores" as color;
+
+.mainCatalogo {
+  gap: 5px;
+}
+
+.mainCatalogo,
+.contenedorCatalogo,
+.subTituloCatalogo {
+  @extend %flex;
+}
+
+.mainCatalogo,
+.contenedorCatalogo {
+  @extend %flexDirection;
+}
+
+.contenedorCatalogo,
+.contenedorCatalogoCard {
+  padding: 10px;
+}
+
+.subTituloCatalogo {
+  position: relative;
+  @include mixin.display(center, center);
+  @include mixin.tipografia("Roboto", 600, 25px);
+}
+
+.subTituloCatalogo::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.582);
+  margin-left: 10px;
+}
+
+.contenedorCatalogoProductos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+
+.contenedorCatalogoCard {
+  @extend %border;
+  @extend %borderRadius1;
+  height: auto;
+  @extend %textAlign;
+  @include mixin.tipografia("Roboto", 600, 13px);
+  img {
+    width: 50%;
+  }
+  button {
+    background-color: nth(color.$color, 2);
+    color: nth(color.$color, 3);
+    padding: 2px 10px;
+    border: none;
+    @extend %borderRadius2;
+    @include mixin.tipografia("Roboto", 600, 15px);
+    @extend %boxShadow;
+  }
+  button:hover {
+    background-color: nth(color.$color, 3);
+    color: nth(color.$color, 2);
+  }
+}

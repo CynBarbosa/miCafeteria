@@ -1,0 +1,56 @@
+@use "../utilidades/colores" as color;
+@use "../utilidades/extends";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.iconFondo {
+  @extend %borderRadius1;
+  padding: 2px;
+}
+body,
+::-webkit-scrollbar-track {
+  background-color: nth(color.$color, 1);
+}
+.borde {
+  box-shadow: 2px 1px 1px #e2ded749;
+}
+.shadowText {
+  font-size: 40px;
+  text-shadow: 2px 2px 1px nth(color.$color, 1);
+  width: 100%;
+  color: nth(color.$color, 3);
+  padding: 7px 0px;
+  @extend %textAlign;
+}
+/*<-----Personalización de la barra de scroll(Chrome, Edge y Safari)----->*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track,
+.borde {
+  @extend %borderRadius1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: nth(color.$color, 3);
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb:hover,
+.shadowText,
+.iconFondo {
+  background-color: nth(color.$color, 2);
+}
+
+main {
+  padding-bottom: 60px;
+}
+
+@media (max-width: 500px) {
+  .shadowText {
+    font-size: 20px;
+  }
+  main {
+    padding-bottom: 80px;
+  }
+}

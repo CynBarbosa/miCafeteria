@@ -1,0 +1,45 @@
+@use "../utilidades/extends";
+@use "../utilidades/mixins" as mixin;
+@use "../utilidades/colores" as color;
+
+.contenedorNosotros {
+  @extend %flexDirection;
+  gap: 10px;
+  img {
+    @extend %borderRadius1;
+    width: 70%;
+  }
+  p {
+    padding: 10px 15px;
+    @include mixin.tipografia("Roboto", 400, 21px);
+    @include mixin.display(center, center);
+    span {
+      padding: 5px;
+      @extend %borderRadius2;
+      color: nth(color.$color, 3);
+      @include mixin.tipografia("Roboto", 600, 23px);
+    }
+  }
+}
+.contenedorNosotros,
+.contenedorNosotrosSecundario {
+  @extend %flex;
+  @include mixin.display(space-between, center);
+}
+.contenedorNosotrosSecundario {
+  width: 80%;
+  div {
+    width: 50%;
+    @extend %border;
+    @extend %borderRadius1;
+    padding-top: 8px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.445);
+    margin: 0px 5px 10px 5px;
+    p {
+      @include mixin.tipografia("Roboto", 600, 21px);
+      span {
+        @include mixin.tipografia("Roboto", 600, 23px);
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "../../utilidades/mixins" as mixin;
+
+@media (max-width: 500px) {
+  .logoHeader {
+    @include mixin.widthHeight(60px, 60px);
+  }
+  .container-fluid {
+    flex-direction: column;
+    @include mixin.display(center, center);
+  }
+  .navbar-toggler {
+    @include mixin.widthHeight(40px, 30px);
+    padding: 0;
+    .navbar-toggler-icon {
+      @include mixin.widthHeight(20px, 20px);
+    }
+  }
+  .navbar-nav {
+    @include mixin.tipografia("Roboto", 500, 12px);
+    text-align: center;
+  }
+}

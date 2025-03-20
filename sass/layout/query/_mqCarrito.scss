@@ -1,0 +1,44 @@
+@use "../../utilidades/mixins" as mixin;
+
+@media (max-width: 500px) {
+  .contenedorCarrito {
+    flex-direction: column;
+    @include mixin.display(center, center);
+  }
+  .contenedorCarritoTarj {
+    width: 100%;
+  }
+  .carritoTarj {
+    margin: 10px;
+  }
+  .carritoImg {
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .contenedorCarritoTexto {
+    padding: 5px 10px;
+    gap: 5px;
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .iconoEliminar,
+  .contenedorCarritoPedido {
+    width: 80%;
+  }
+  .contenedorCarritoPedido {
+    gap: 5px;
+    padding: 5px 0;
+  }
+  .carritoPedidoBoton,
+  .contenedorCarritoTexto,
+  .numeroContador {
+    font-size: 15px;
+  }
+  .numeroContador,
+  .botonContador,
+  .contenedorCarritoEliminar,
+  .carritoImg {
+    width: 20%;
+  }
+}

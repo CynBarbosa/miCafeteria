@@ -1,0 +1,47 @@
+@use "../utilidades/extends";
+@use "../utilidades/mixins" as mixin;
+@use "../utilidades/colores" as color;
+
+.mainUsuario,
+.contenedorUser {
+  @include mixin.display(center, center);
+}
+.mainUsuario,
+.contenedorUser,
+.contenedorSecundarioUsuario {
+  @extend %flex;
+}
+.contenedorUser,
+.contenedorSecundarioUsuario {
+  @extend %flexDirection;
+}
+.contenedorUser {
+  width: 50%;
+  @extend %border;
+  @extend %borderRadius1;
+  gap: 20px;
+  @include mixin.tipografia("Roboto", 600, 18px);
+  @include mixin.marginPadding(20px 0 0 0, 15px 0);
+  .contenedorSecundarioUsuario {
+    width: 80%;
+    input {
+      @extend %borderRadius2;
+      padding: 2px 5px;
+    }
+  }
+  a,
+  .bottonUsuario:hover {
+    color: nth(color.$color, 2);
+  }
+  .bottonUsuario {
+    background-color: nth(color.$color, 2);
+    color: nth(color.$color, 3);
+    border: none;
+    @extend %borderRadius2;
+    @extend %boxShadow;
+    padding: 2px 15px;
+  }
+  .bottonUsuario:hover {
+    background-color: nth(color.$color, 3);
+  }
+}

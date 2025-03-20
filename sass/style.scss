@@ -1,0 +1,15 @@
+@use "./layout/general";
+@use "./layout/header";
+@use "./layout/query/mqHeader";
+@use "./layout/home";
+@use "./layout/catalogo";
+@use "./layout/query/mqCatalogo";
+@use "./layout/nosotros";
+@use "./layout/query/mqNosotros";
+@use "./layout/login";
+@use "./layout/query/mqUsuario";
+@use "./layout/carrito";
+@use "./layout/query/mqCarrito";
+@use "./layout/footer";
+@use "./layout/query/mqFooter";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");

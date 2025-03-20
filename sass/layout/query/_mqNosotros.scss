@@ -1,0 +1,30 @@
+@use "../../utilidades/mixins" as mixin;
+
+@media (max-width: 500px) {
+  .contenedorNosotros {
+    h2 {
+      font-size: 30px;
+    }
+    img {
+      @include mixin.widthHeight(75%, 75%);
+    }
+    p {
+      font-size: 13px;
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+  .contenedorNosotrosSecundario {
+    flex-direction: column;
+    div {
+      width: 100%;
+      p {
+        font-size: 15px;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

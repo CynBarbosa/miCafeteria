@@ -1,0 +1,45 @@
+@use "../utilidades/extends";
+@use "../utilidades/mixins" as mixin;
+@use "../utilidades/colores" as color;
+
+header {
+  background-image: linear-gradient(
+    to top,
+    #e2ded7,
+    #a4927a,
+    #30261c,
+    #30261c,
+    #30261c,
+    #30261c,
+    #30261c,
+    #30261c,
+    #30261c
+  );
+  @extend %flex;
+  @include mixin.display(space-between, center);
+}
+.logoHeader {
+  @include mixin.widthHeight(80px, 80px);
+  margin: 2px 0 15px 15px;
+}
+.container-fluid {
+  margin: 2px 10px 25px 0px;
+}
+.navbar-nav {
+  margin: 0 10px;
+  @include mixin.tipografia("Roboto", 500, 18px);
+}
+.nav-link {
+  @extend %border;
+  @extend %borderRadius1;
+  color: nth(color.$color, 2);
+  margin: 0 2px;
+}
+.dropdown-menu,
+.fondo {
+  background-color: nth(color.$color, 2);
+}
+.dropdown-item {
+  color: nth(color.$color, 3);
+  @include mixin.tipografia("Roboto", 500, 13px);
+}

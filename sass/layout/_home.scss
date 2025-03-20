@@ -1,0 +1,16 @@
+@use "../utilidades/extends";
+@use "../utilidades/mixins" as mixin;
+
+.mainHome {
+  width: 100%;
+  @extend %flex;
+  @extend %flexDirection;
+  @include mixin.display(center, center);
+  gap: 10px;
+  img {
+    width: 90%;
+  }
+}
+.contenedorHome {
+  padding: 10px;
+}
