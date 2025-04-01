@@ -65,6 +65,7 @@
   background-color: nth(color.$color, 2);
   border: 5px solid transparent;
   position: relative;
+  transition: 0.4s;
   animation: borderAnimation 4s linear infinite;
   button {
     background-color: nth(color.$color, 3);

@@ -263,6 +263,7 @@ header {
   background-color: #a4927a;
   border: 5px solid transparent;
   position: relative;
+  transition: 0.4s;
   animation: borderAnimation 4s linear infinite;
 }
 .contenedorCatalogoCard:hover button {
