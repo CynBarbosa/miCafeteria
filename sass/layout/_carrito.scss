@@ -2,109 +2,103 @@
 @use "../utilidades/mixins" as mixin;
 @use "../utilidades/colores" as color;
 
-.mainCarrito,
-.contenedorCarritoTexto,
-.contenedorCarritoPedido {
+.mainCarrito {
   @extend %flex;
   @extend %flexDirection;
 }
-
-.contenedorCarrito,
-.contenedorCarritoCantidad,
-.contadorContenedor {
-  @extend %flex;
-  gap: 5px;
-}
-
-.carritoTarj,
-.contenedorCarritoEliminar,
-.contenedorCarritoPedido {
-  @extend %flex;
-  @include mixin.display(center, center);
-}
-
-.numeroContador,
-.botonContador,
-.carritoPedidoTexto {
-  @extend %textAlign;
-}
-
-.carritoTarj,
-.carritoImg,
-.numeroContador,
-.botonContador,
-.contenedorCarritoPedido,
-.carritoPedidoBoton {
-  @extend %borderRadius2;
-}
-
-.carritoTarj,
-.contenedorCarritoPedido {
-  @extend %border;
-}
-
-.numeroContador,
-.botonContador,
-.carritoPedidoBoton {
-  border: none;
-}
-
-.carritoTarj,
-.numeroContador,
-.carritoPedidoBoton {
-  @include mixin.tipografia("Roboto", 500, 15px);
-}
-
-.carritoImg,
-.numeroContador,
-.botonContador,
-.contenedorCarritoEliminar {
-  width: 10%;
-}
-
 .contenedorCarrito {
   padding: 10px;
   width: 100%;
-}
-
-.contenedorCarritoTarj {
-  width: 70%;
-}
-
-.carritoTarj {
-  margin-bottom: 5px;
-}
-
-.contenedorCarritoTexto {
-  width: 80%;
-  padding: 5px 10px;
-}
-
-.carritoTarj,
-.carritoPedidoTexto,
-.botonContador,
-.carritoPedidoBoton {
-  color: nth(color.$color, 3);
-}
-
-.botonContador,
-.carritoPedidoBoton {
-  background-color: nth(color.$color, 2);
-  @extend %boxShadow;
-}
-.carritoPedidoBoton:hover {
-  background-color: nth(color.$color, 3);
-  color: nth(color.$color, 2);
-}
-
-.contenedorCarritoPedido {
-  width: 30%;
-  gap: 10px;
-  .carritoPedidoTexto {
-    @include mixin.tipografia("Roboto", 500, 20px);
+  @extend %flex;
+  gap: 5px;
+  .contenedorCarritoTarj {
+    width: 50%;
+    @extend %flex;
+    @extend %flexDirection;
+    @include mixin.display(center, end);
+    .carritoTarj {
+      width: 70%;
+      height: 120px;
+      @extend %flex;
+      @include mixin.display(center, center);
+      @extend %borderRadius2;
+      @extend %border;
+      @include mixin.tipografia("Roboto", 500, 15px);
+      margin-bottom: 5px;
+      color: nth(color.$color, 3);
+      .carritoImg {
+        width: 10%;
+        @extend %borderRadius2;
+      }
+      .contenedorCarritoTexto {
+        @extend %flex;
+        @extend %flexDirection;
+        width: 80%;
+        padding: 5px 10px;
+        .contenedorCarritoCantidad {
+          @extend %flex;
+          gap: 5px;
+          .contadorContenedor {
+            @extend %flex;
+            gap: 5px;
+          }
+          .botonContador {
+            @extend %textAlign;
+            @extend %borderRadius2;
+            border: none;
+            width: 10%;
+            color: nth(color.$color, 3);
+            background-color: nth(color.$color, 2);
+            @extend %boxShadow;
+          }
+          .numeroContador {
+            @extend %textAlign;
+            @extend %borderRadius2;
+            border: none;
+            @include mixin.tipografia("Roboto", 500, 15px);
+            width: 10%;
+          }
+        }
+      }
+      .contenedorCarritoEliminar {
+        @extend %flex;
+        @include mixin.display(center, center);
+        width: 10%;
+      }
+    }
+  }
+  .contenedorCarritoPedido {
+    @extend %flex;
+    @extend %flexDirection;
+    @include mixin.display(center, center);
+    @extend %borderRadius2;
+    @extend %border;
+    width: 30%;
+    gap: 10px;
+    h3 {
+      font-size: 30px;
+    }
+    .carritoPedidoTexto {
+      @include mixin.tipografia("Roboto", 500, 20px);
+      @extend %textAlign;
+      color: nth(color.$color, 3);
+    }
+    .carritoPedidoBoton {
+      border: none;
+      @include mixin.tipografia("Roboto", 500, 15px);
+      @extend %borderRadius2;
+      color: nth(color.$color, 3);
+      background-color: nth(color.$color, 2);
+      @extend %boxShadow;
+      @include mixin.marginPadding(0 0 10px 0, 2px 10px);
+      :hover {
+        background-color: nth(color.$color, 3);
+        color: nth(color.$color, 2);
+      }
+    }
   }
 }
-
-.carritoPedidoBoton {
-  @include mixin.marginPadding(0 0 10px 0, 2px 10px);
-}
+// .carritoPedidoBoton:hover {
+//   background-color: nth(color.$color, 3);
+//   color: nth(color.$color, 2);
+// }

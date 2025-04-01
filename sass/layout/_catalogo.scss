@@ -4,30 +4,31 @@
 
 .mainCatalogo {
   gap: 5px;
-}
-
-.mainCatalogo,
-.contenedorCatalogo,
-.subTituloCatalogo {
   @extend %flex;
-}
-
-.mainCatalogo,
-.contenedorCatalogo {
   @extend %flexDirection;
 }
-
-.contenedorCatalogo,
+.contenedorCatalogo {
+  margin-left: 15%;
+  width: 70%;
+  padding: 10px;
+  @extend %flex;
+  @extend %flexDirection;
+}
+.contenedorCatalogoProductos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 5px;
+}
 .contenedorCatalogoCard {
   padding: 10px;
 }
-
 .subTituloCatalogo {
   position: relative;
+  @extend %flex;
   @include mixin.display(center, center);
   @include mixin.tipografia("Roboto", 600, 25px);
 }
-
 .subTituloCatalogo::after {
   content: "";
   flex-grow: 1;
@@ -35,13 +36,6 @@
   background-color: rgba(0, 0, 0, 0.582);
   margin-left: 10px;
 }
-
-.contenedorCatalogoProductos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px;
-}
-
 .contenedorCatalogoCard {
   @extend %border;
   height: auto;
@@ -67,20 +61,19 @@
     transform: translate(0, 0);
   }
 }
-
 .contenedorCatalogoCard:hover {
-  background-color: nth(color.$color, 3);
-  color: nth(color.$color, 1);
+  background-color: nth(color.$color, 2);
   border: 5px solid transparent;
   position: relative;
   animation: borderAnimation 4s linear infinite;
   button {
+    background-color: nth(color.$color, 3);
+    color: nth(color.$color, 1);
     box-shadow: 5px 5px 5px 0px nth(color.$color, 1);
     -webkit-box-shadow: 5px 5px 5px 0px nth(color.$color, 1);
     -moz-box-shadow: 5px 5px 5px 0px nth(color.$color, 1);
   }
 }
-
 @keyframes borderAnimation {
   0% {
     border-image-source: linear-gradient(45deg, #488cfb, #29dbbc);
@@ -98,7 +91,6 @@
     border-image-source: linear-gradient(45deg, #e440bb, #655adc);
   }
 }
-
 .contenedorCatalogoCard:hover {
   border-image-slice: 1;
 }

@@ -5,50 +5,31 @@
   border-radius: 10px;
 }
 
-.carritoTarj,
-.carritoImg,
-.numeroContador,
-.botonContador,
-.contenedorCarritoPedido,
-.carritoPedidoBoton, .contenedorUser .contenedorSecundarioUsuario input, .contenedorUser .bottonUsuario, .contenedorNosotros p span, .contenedorCatalogoCard button {
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .carritoImg, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .botonContador, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .numeroContador, .contenedorCarrito .contenedorCarritoPedido, .contenedorCarrito .contenedorCarritoPedido .carritoPedidoBoton, .contenedorUser .contenedorSecundarioUsuario input, .contenedorUser .bottonUsuario, .contenedorNosotros p span, .contenedorCatalogoCard button {
   border-radius: 5px;
 }
 
-footer, .redesSociales, .mainCarrito,
-.contenedorCarritoTexto,
-.contenedorCarritoPedido, .contenedorCarrito,
-.contenedorCarritoCantidad,
-.contadorContenedor, .carritoTarj,
-.contenedorCarritoEliminar, .mainUsuario,
+footer, .redesSociales, .mainCarrito, .contenedorCarrito, .contenedorCarrito .contenedorCarritoTarj, .contenedorCarrito .contenedorCarritoTarj .carritoTarj, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .contadorContenedor, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoEliminar, .contenedorCarrito .contenedorCarritoPedido, .mainUsuario,
 .contenedorUser,
 .contenedorSecundarioUsuario, .contenedorNosotros,
-.contenedorNosotrosSecundario, .mainCatalogo,
-.contenedorCatalogo,
-.subTituloCatalogo, .mainHome, header {
+.contenedorNosotrosSecundario, .mainCatalogo, .contenedorCatalogo, .subTituloCatalogo, .mainHome, header {
   display: flex;
 }
 
-.mainCarrito,
-.contenedorCarritoTexto,
-.contenedorCarritoPedido, .contenedorUser,
-.contenedorSecundarioUsuario, .contenedorNosotros, .mainCatalogo,
-.contenedorCatalogo, .mainHome {
+.mainCarrito, .contenedorCarrito .contenedorCarritoTarj, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto, .contenedorCarrito .contenedorCarritoPedido, .contenedorUser,
+.contenedorSecundarioUsuario, .contenedorNosotros, .mainCatalogo, .contenedorCatalogo, .mainHome {
   flex-direction: column;
 }
 
-.carritoTarj,
-.contenedorCarritoPedido, .contenedorUser, .contenedorNosotrosSecundario div, .contenedorCatalogoCard, .nav-link {
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj, .contenedorCarrito .contenedorCarritoPedido, .contenedorUser, .contenedorNosotrosSecundario div, .contenedorCatalogoCard, .nav-link {
   border: 1px solid rgba(0, 0, 0, 0.582);
 }
 
-.numeroContador,
-.botonContador,
-.carritoPedidoTexto, .contenedorCatalogoCard, .shadowText {
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .botonContador, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .numeroContador, .contenedorCarrito .contenedorCarritoPedido .carritoPedidoTexto, .contenedorCatalogoCard, .shadowText {
   text-align: center;
 }
 
-.botonContador,
-.carritoPedidoBoton, .contenedorUser .bottonUsuario, .contenedorCatalogoCard button {
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .botonContador, .contenedorCarrito .contenedorCarritoPedido .carritoPedidoBoton, .contenedorUser .bottonUsuario, .contenedorCatalogoCard button {
   box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
   -webkit-box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
   -moz-box-shadow: 5px 5px 5px 0px rgba(48, 38, 28, 0.75);
@@ -182,11 +163,12 @@ header {
   gap: 10px;
 }
 .mainHome img {
-  width: 90%;
+  width: 70%;
 }
 
 .contenedorHome {
   padding: 10px;
+  width: 70%;
 }
 
 .textBienvenida {
@@ -203,6 +185,12 @@ header {
 }
 
 @media (max-width: 500px) {
+  .mainHome img {
+    width: 95%;
+  }
+  .contenedorHome {
+    width: 100%;
+  }
   .textBienvenida {
     font-size: 15px;
   }
@@ -211,7 +199,19 @@ header {
   gap: 5px;
 }
 
-.contenedorCatalogo,
+.contenedorCatalogo {
+  margin-left: 15%;
+  width: 70%;
+  padding: 10px;
+}
+
+.contenedorCatalogoProductos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 5px;
+}
+
 .contenedorCatalogoCard {
   padding: 10px;
 }
@@ -231,12 +231,6 @@ header {
   height: 2px;
   background-color: rgba(0, 0, 0, 0.582);
   margin-left: 10px;
-}
-
-.contenedorCatalogoProductos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px;
 }
 
 .contenedorCatalogoCard {
@@ -267,13 +261,14 @@ header {
 }
 
 .contenedorCatalogoCard:hover {
-  background-color: #30261c;
-  color: #e2ded7;
+  background-color: #a4927a;
   border: 5px solid transparent;
   position: relative;
   animation: borderAnimation 4s linear infinite;
 }
 .contenedorCatalogoCard:hover button {
+  background-color: #30261c;
+  color: #e2ded7;
   box-shadow: 5px 5px 5px 0px #e2ded7;
   -webkit-box-shadow: 5px 5px 5px 0px #e2ded7;
   -moz-box-shadow: 5px 5px 5px 0px #e2ded7;
@@ -301,6 +296,10 @@ header {
 }
 
 @media (max-width: 500px) {
+  .contenedorCatalogo {
+    width: 100%;
+    margin-left: 0;
+  }
   .contenedorCatalogoProductos {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -426,88 +425,86 @@ header {
     font-size: 15px;
   }
 }
-.contenedorCarrito,
-.contenedorCarritoCantidad,
-.contadorContenedor {
-  gap: 5px;
-}
-
-.carritoTarj,
-.contenedorCarritoEliminar,
-.contenedorCarritoPedido {
-  justify-content: center;
-  align-items: center;
-}
-
-.numeroContador,
-.botonContador,
-.carritoPedidoBoton {
-  border: none;
-}
-
-.carritoTarj,
-.numeroContador,
-.carritoPedidoBoton {
-  font-family: "Roboto", serif;
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.carritoImg,
-.numeroContador,
-.botonContador,
-.contenedorCarritoEliminar {
-  width: 10%;
-}
-
 .contenedorCarrito {
   padding: 10px;
   width: 100%;
+  gap: 5px;
 }
-
-.contenedorCarritoTarj {
+.contenedorCarrito .contenedorCarritoTarj {
+  width: 50%;
+  justify-content: center;
+  align-items: end;
+}
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj {
   width: 70%;
-}
-
-.carritoTarj {
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 15px;
   margin-bottom: 5px;
+  color: #30261c;
 }
-
-.contenedorCarritoTexto {
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj .carritoImg {
+  width: 10%;
+}
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto {
   width: 80%;
   padding: 5px 10px;
 }
-
-.carritoTarj,
-.carritoPedidoTexto,
-.botonContador,
-.carritoPedidoBoton {
-  color: #30261c;
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad {
+  gap: 5px;
 }
-
-.botonContador,
-.carritoPedidoBoton {
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .contadorContenedor {
+  gap: 5px;
+}
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .botonContador {
+  border: none;
+  width: 10%;
+  color: #30261c;
   background-color: #a4927a;
 }
-
-.carritoPedidoBoton:hover {
-  background-color: #30261c;
-  color: #a4927a;
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .numeroContador {
+  border: none;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 15px;
+  width: 10%;
 }
-
-.contenedorCarritoPedido {
+.contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoEliminar {
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+.contenedorCarrito .contenedorCarritoPedido {
+  justify-content: center;
+  align-items: center;
   width: 30%;
   gap: 10px;
 }
-.contenedorCarritoPedido .carritoPedidoTexto {
+.contenedorCarrito .contenedorCarritoPedido h3 {
+  font-size: 30px;
+}
+.contenedorCarrito .contenedorCarritoPedido .carritoPedidoTexto {
   font-family: "Roboto", serif;
   font-weight: 500;
   font-size: 20px;
+  color: #30261c;
 }
-
-.carritoPedidoBoton {
+.contenedorCarrito .contenedorCarritoPedido .carritoPedidoBoton {
+  border: none;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #30261c;
+  background-color: #a4927a;
   margin: 0 0 10px 0;
   padding: 2px 10px;
+}
+.contenedorCarrito .contenedorCarritoPedido .carritoPedidoBoton :hover {
+  background-color: #30261c;
+  color: #a4927a;
 }
 
 @media (max-width: 500px) {
@@ -516,41 +513,48 @@ header {
     justify-content: center;
     align-items: center;
   }
-  .contenedorCarritoTarj {
-    width: 100%;
+  .contenedorCarrito .contenedorCarritoTarj {
+    width: 87%;
   }
-  .carritoTarj {
+  .contenedorCarrito .contenedorCarritoTarj .carritoTarj {
+    width: 94%;
     margin: 10px;
   }
-  .carritoImg {
+  .contenedorCarrito .contenedorCarritoTarj .carritoTarj .carritoImg {
     margin: 5px;
     border-radius: 5px;
+    width: 20%;
   }
-  .contenedorCarritoTexto {
+  .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto {
     padding: 5px 10px;
     gap: 5px;
   }
-  .contenedorCarritoTexto h3 {
+  .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto h3 {
     font-size: 15px;
   }
-  .iconoEliminar,
-  .contenedorCarritoPedido {
+  .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .contadorContenedor .botonContador {
+    width: 20%;
+  }
+  .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .contadorContenedor .numeroContador {
+    width: 20%;
+    font-size: 15px;
+  }
+  .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoEliminar {
+    width: 20%;
+  }
+  .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoEliminar .iconoEliminar {
     width: 80%;
   }
-  .contenedorCarritoPedido {
+  .contenedorCarrito .contenedorCarritoPedido {
+    width: 80%;
     gap: 5px;
     padding: 5px 0;
   }
-  .carritoPedidoBoton,
-  .contenedorCarritoTexto,
-  .numeroContador {
-    font-size: 15px;
+  .contenedorCarrito .contenedorCarritoPedido h3 {
+    font-size: 20px;
   }
-  .numeroContador,
-  .botonContador,
-  .contenedorCarritoEliminar,
-  .carritoImg {
-    width: 20%;
+  .contenedorCarrito .contenedorCarritoPedido .carritoPedidoBoton {
+    font-size: 15px;
   }
 }
 footer {

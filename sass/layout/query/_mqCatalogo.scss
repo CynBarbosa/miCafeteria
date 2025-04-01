@@ -1,4 +1,8 @@
 @media (max-width: 500px) {
+  .contenedorCatalogo {
+    width: 100%;
+    margin-left: 0;
+  }
   .contenedorCatalogoProductos {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);

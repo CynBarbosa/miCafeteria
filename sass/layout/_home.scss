@@ -9,11 +9,12 @@
   @include mixin.display(center, center);
   gap: 10px;
   img {
-    width: 90%;
+    width: 70%;
   }
 }
 .contenedorHome {
   padding: 10px;
+  width: 70%;
 }
 .textBienvenida {
   @include mixin.tipografia("Roboto", 600, 30px);

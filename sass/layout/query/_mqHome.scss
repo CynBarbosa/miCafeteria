@@ -1,4 +1,12 @@
 @media (max-width: 500px) {
+  .mainHome {
+    img {
+      width: 95%;
+    }
+  }
+  .contenedorHome {
+    width: 100%;
+  }
   .textBienvenida {
     font-size: 15px;
   }
