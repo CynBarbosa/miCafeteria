@@ -3,6 +3,8 @@
 @use "../utilidades/colores" as color;
 
 .contenedorNosotros {
+  @extend %flex;
+  @include mixin.display(space-between, center);
   @extend %flexDirection;
   gap: 10px;
   img {
@@ -10,6 +12,7 @@
     width: 70%;
   }
   p {
+    width: 70%;
     padding: 10px 15px;
     @include mixin.tipografia("Roboto", 400, 21px);
     @include mixin.display(center, center);
@@ -21,24 +24,28 @@
     }
   }
 }
-.contenedorNosotros,
 .contenedorNosotrosSecundario {
+  width: 65%;
   @extend %flex;
   @include mixin.display(space-between, center);
-}
-.contenedorNosotrosSecundario {
-  width: 80%;
+  gap: 10%;
   div {
-    width: 50%;
+    width: 100%;
+    height: auto;
     @extend %border;
     @extend %borderRadius1;
     padding-top: 8px;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.445);
     margin: 0px 5px 10px 5px;
+    h3 {
+      font-size: 30px;
+    }
     p {
-      @include mixin.tipografia("Roboto", 600, 21px);
+      margin: 20px 20px 10px;
+      padding: 5px 2px;
+      @include mixin.tipografia("Roboto", 600, 18px);
       span {
-        @include mixin.tipografia("Roboto", 600, 23px);
+        @include mixin.tipografia("Roboto", 600, 20px);
       }
     }
   }

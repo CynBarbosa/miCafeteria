@@ -11,8 +11,7 @@
 
 footer, .redesSociales, .mainCarrito, .contenedorCarrito, .contenedorCarrito .contenedorCarritoTarj, .contenedorCarrito .contenedorCarritoTarj .carritoTarj, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoTexto .contenedorCarritoCantidad .contadorContenedor, .contenedorCarrito .contenedorCarritoTarj .carritoTarj .contenedorCarritoEliminar, .contenedorCarrito .contenedorCarritoPedido, .mainUsuario,
 .contenedorUser,
-.contenedorSecundarioUsuario, .contenedorNosotros,
-.contenedorNosotrosSecundario, .mainCatalogo, .contenedorCatalogo, .subTituloCatalogo, .mainHome, header {
+.contenedorSecundarioUsuario, .contenedorNosotros, .contenedorNosotrosSecundario, .mainCatalogo, .contenedorCatalogo, .subTituloCatalogo, .mainHome, header {
   display: flex;
 }
 
@@ -308,12 +307,15 @@ header {
   }
 }
 .contenedorNosotros {
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
 }
 .contenedorNosotros img {
   width: 70%;
 }
 .contenedorNosotros p {
+  width: 70%;
   padding: 10px 15px;
   font-family: "Roboto", serif;
   font-weight: 400;
@@ -329,30 +331,33 @@ header {
   font-size: 23px;
 }
 
-.contenedorNosotros,
 .contenedorNosotrosSecundario {
+  width: 65%;
   justify-content: space-between;
   align-items: center;
-}
-
-.contenedorNosotrosSecundario {
-  width: 80%;
+  gap: 10%;
 }
 .contenedorNosotrosSecundario div {
-  width: 50%;
+  width: 100%;
+  height: auto;
   padding-top: 8px;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.445);
   margin: 0px 5px 10px 5px;
 }
+.contenedorNosotrosSecundario div h3 {
+  font-size: 30px;
+}
 .contenedorNosotrosSecundario div p {
+  margin: 20px 20px 10px;
+  padding: 5px 2px;
   font-family: "Roboto", serif;
   font-weight: 600;
-  font-size: 21px;
+  font-size: 18px;
 }
 .contenedorNosotrosSecundario div p span {
   font-family: "Roboto", serif;
   font-weight: 600;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 @media (max-width: 500px) {
@@ -360,20 +365,25 @@ header {
     font-size: 30px;
   }
   .contenedorNosotros img {
-    width: 75%;
-    height: 75%;
+    width: 90%;
+    height: 90%;
   }
   .contenedorNosotros p {
     font-size: 13px;
+    width: 90%;
   }
   .contenedorNosotros p span {
     font-size: 15px;
   }
   .contenedorNosotrosSecundario {
     flex-direction: column;
+    width: 80%;
   }
   .contenedorNosotrosSecundario div {
     width: 100%;
+  }
+  .contenedorNosotrosSecundario div h3 {
+    font-size: 20px;
   }
   .contenedorNosotrosSecundario div p {
     font-size: 15px;
